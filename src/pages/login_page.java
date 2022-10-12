@@ -22,7 +22,7 @@ public class login_page {
 	}
 	
 	public WebElement getLoginButton() {
-		return driver.findElement(By.xpath("//*[type = 'submit']"));		
+		return driver.findElement(By.xpath("//*[@type = 'submit']"));		
 	}
 	
 	
