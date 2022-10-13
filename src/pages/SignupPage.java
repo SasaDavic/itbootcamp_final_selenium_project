@@ -7,6 +7,10 @@ import org.openqa.selenium.WebElement;
 public class SignupPage {
 	
 	private WebDriver driver;
+	
+	public SignupPage(WebDriver driver) {
+		this.driver = driver;
+	}
 
 	public WebElement getNameLink() {
 		return driver.findElement(By.xpath("//*[@id = 'name']"));

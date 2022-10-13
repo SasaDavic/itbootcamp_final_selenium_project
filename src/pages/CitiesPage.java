@@ -11,6 +11,11 @@ public class CitiesPage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	
+	public CitiesPage(WebDriver driver, WebDriverWait wait) {
+		this.driver = driver;
+		this.wait = wait;
+	}
+
 	public WebElement getNewItemButton() {
 		return driver.findElement(By.xpath("//*[@class= 'text-right']/button"));
 	}
@@ -27,6 +32,10 @@ public class CitiesPage {
 	public void waitForDialogDeleteToBeVisible() {
 		wait.until(ExpectedConditions
 				.visibilityOfAllElementsLocatedBy(By.xpath("v-card v-sheet theme--light rounded-0")));			
+	}
+	
+	public WebElement getNewEditDialogInput() {
+		return this.driver.findElement(By.name("name"));
 	}
 	
 	public WebElement getSaveButton() {

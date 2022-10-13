@@ -22,7 +22,7 @@ public class Nav_Page {
 	}
 	
 	public WebElement getLoginLink() {
-		return driver.findElement(By.xpath("//*[ contains (text(), ' Login ')]"));
+		return driver.findElement(By.className("btnLogin"));
 	}
 	
 	public WebElement getSignUpLink() {
@@ -33,26 +33,24 @@ public class Nav_Page {
 		return driver.findElement(By.xpath("//*[@class = 'btnLocaleActivation v-btn v-btn--text theme--light v-size--default']"));
 	}
 	
-	Select drpLanguage = new Select (driver.findElement(By.xpath("//*[@class = 'btnLocaleActivation v-btn v-btn--text theme--light v-size--default']")));
-	
-	public void getLanguageButtonEn() {	
-		drpLanguage.selectByVisibleText(" en ");
+	public WebElement getENLanguageButton() {
+		return driver.findElement(By.className("btnEN"));
 	}
 
-	public void getLanguageButtonEs() {	
-		drpLanguage.selectByVisibleText(" es ");
+	public WebElement getESLanguageButton() {
+		return driver.findElement(By.className("btnES"));
 	}
-	
-	public void getLanguageButtonFr() {	
-		drpLanguage.selectByVisibleText(" fr ");
+
+	public WebElement getFRLanguageButton() {
+		return driver.findElement(By.className("btnFR"));
 	}
-	
-	public void getLanguageButtonCn() {	
-		drpLanguage.selectByVisibleText(" cn ");
+
+	public WebElement getCNLanguageButton() {
+		return driver.findElement(By.className("btnCN"));
 	}
-	
-	public void getLanguageButtonUa() {	
-		drpLanguage.selectByVisibleText(" ua ");
+
+	public WebElement getUALanguageButton() {
+		return driver.findElement(By.className("btnUA"));
 	}
 	
 	///kada se korisnik uloguje
@@ -77,6 +75,8 @@ public class Nav_Page {
 		return driver.findElement(By.xpath("//*[ contains (text(), 'Logout')]"));
 	}
 	
-	
+	public WebElement getHeader() {
+		return driver.findElement(By.tagName("h1"));
+	}
 	
 }
